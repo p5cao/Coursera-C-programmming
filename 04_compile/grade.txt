@@ -1,0 +1,9 @@
+Grading at Wed Oct 30 05:14:33 UTC 2019
+I expected to find a file called 'hello.c' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+Hello.c
+README
+Cannot proceed without hello.c
+
+Overall Grade: FAILED
