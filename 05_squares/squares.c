@@ -48,9 +48,9 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
   //count from 0 to h. Call the number you count with y
   int x;
   int y;
-  for (y = 0; y <= h; y++){
+  for (y = 0; y < h; y++){
     //count from 0 to w. Call the number you count with x
-    for (x = 0; x <= w; x++){
+    for (x = 0; x < w; x++){
       //check if  EITHER
       if (((x >= x_offset && x <  x_offset + size2) && ( y == y_offset || y == y_offset + size2 -1))||
 	  ((y >= y_offset && y <  y_offset + size2) && ( x == x_offset || x == x_offset + size2 -1))){
