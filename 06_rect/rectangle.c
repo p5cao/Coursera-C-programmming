@@ -64,7 +64,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
 //You should not need to modify any code below this line
 void printRectangle(rectangle r) {
   r = canonicalize(r);
-  if (r.width == 0 && r.height == 0) {
+  if (r.width == 0 ||  r.height == 0) {
     printf("<empty>\n");
   }
   else {
