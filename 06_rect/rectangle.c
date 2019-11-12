@@ -49,22 +49,28 @@ rectangle intersection(rectangle r1, rectangle r2) {
   r.y = max(r1.y, r2.y);
   if (r1.x + r1.width - r.x > 0 && r2.x + r2.width - r.x > 0){
     r.width = min(r1.x + r1.width - r.x, r2.x + r2.width - r.x);
+    }else if(r1.x + r1.width - r.x == 0 ||  r2.x + r2.width -r.x == 0){
+    r.width = 0;
   }else{
     r.width = 0;
+    r.height = 0;
   }
   
-  if (r1.y + r1.height - r.y > 0 && r2.y + r2.height - r.y > 0){
+  if ((r1.y + r1.height - r.y > 0 && r2.y + r2.height - r.y > 0)&&(r1.x + r1.width - r.x >= 0 && r2.x + r2.width - r.x >= 0)){
     r.height = min(r1.y + r1.height - r.y, r2.y + r2.height - r.y);
-  }else{
+  }else if((r1.y + r1.height - r.y == 0 || r2.y + r2.height - r.y == 0)&&(r1.x + r1.width - r.x >= 0 && r2.x + r2.width - r.x >= 0)){
     r.height = 0;
-  } 
+  }else{
+    r.width = 0;
+    r.height = 0;
+  }
   return r;
 }
 
 //You should not need to modify any code below this line
 void printRectangle(rectangle r) {
   r = canonicalize(r);
-  if (r.width == 0 ||  r.height == 0) {
+  if (r.width == 0 &&  r.height == 0) {
     printf("<empty>\n");
   }
   else {
