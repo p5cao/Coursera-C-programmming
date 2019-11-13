@@ -1,22 +1,32 @@
-Grading at Wed Nov 13 06:46:30 UTC 2019
+Grading at Wed Nov 13 06:57:38 UTC 2019
 Attempting to compile retirement.c
-Checking for struct _retire_info
-Found on line 4, column 9 
-Checking for field int months
-Found on line 5, column 3 
-Checking for field double contribution
-Found on line 6, column 3 
-Checking for field double rate_of_return
-Found on line 7, column 3 
-Checking for typedef of struct _retire_info to retire_info
-You have a typedef for retire_info, but it is : 
-typedef struct _retire_info{
-where I instead expected you to define it to struct _retire_info
-not found
-Checking for void retirement (int startAge, double initial,  retire_info working,  retire_info retired)
-Found on line 16, column 1 
-Checking for int main(void)
-Found on line 44, column 1 
-Your code does not have the right struct, fields, and/or functions.
+retirement.c:10:24: error: expected declaration specifiers or ‘...’ before ‘retire_info’
+ double  monthly_change(retire_info info, double balance){
+                        ^
+retirement.c:18:4: error: expected declaration specifiers or ‘...’ before ‘retire_info’
+    retire_info working, //info about working
+    ^
+retirement.c:19:4: error: expected declaration specifiers or ‘...’ before ‘retire_info’
+    retire_info retired) //info about being retired
+    ^
+retirement.c: In function ‘main’:
+retirement.c:46:3: error: statement with no effect [-Werror=unused-value]
+   retire_info working, retired;
+   ^
+retirement.c:46:15: error: expected ‘;’ before ‘working’
+   retire_info working, retired;
+               ^
+retirement.c:50:3: error: ‘working’ undeclared (first use in this function)
+   working.months = 489;
+   ^
+retirement.c:50:3: note: each undeclared identifier is reported only once for each function it appears in
+retirement.c:54:3: error: ‘retired’ undeclared (first use in this function)
+   retired.months = 384;
+   ^
+retirement.c:58:3: error: implicit declaration of function ‘retirement’ [-Werror=implicit-function-declaration]
+   retirement(startAge, initial, working, retired);
+   ^
+cc1: all warnings being treated as errors
+The code did not compile!
 
 Overall Grade: F
