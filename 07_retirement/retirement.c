@@ -5,7 +5,9 @@ struct _retire_info{
   int months;
   double contribution;
   double rate_of_return;
-}retire_info;
+};
+
+typedef struct _retire_info retire_info;
 
 double  monthly_change(retire_info info, double balance){
   balance = balance * (1 + info.rate_of_return) + info.contribution;
