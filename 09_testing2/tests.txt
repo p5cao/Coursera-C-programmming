@@ -1,0 +1,12 @@
+aaaaa aaaab
+aaabb aaaab
+aaabb aaabc
+aabbb bbaaa
+abcde bcdef
+aabbc abbcd
+1121 1121
+abcde
+aa bb c
+aaaaaa bbbbbb
+aaaaa nnnn
+aaaaa nnnnnn
