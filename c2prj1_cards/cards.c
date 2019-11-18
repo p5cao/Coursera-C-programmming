@@ -27,22 +27,21 @@ const char * ranking_to_string(hand_ranking_t r) {
 }
 
 char value_letter(card_t c) {
-  char *x = "";
   switch(c.value){
-  case 2: strcpy(x, "2"); break;
-  case 3: strcpy(x, "3"); break;
-  case 4: strcpy(x, "4"); break;
-  case 5: strcpy(x, "5"); break;
-  case 6: strcpy(x, "6"); break;
-  case 7: strcpy(x, "7"); break;
-  case 8: strcpy(x, "8"); break;
-  case 9: strcpy(x, "9"); break;
-  case 10: strcpy(x, "0"); break;
-  case VALUE_JACK: strcpy(x, "J"); break;
-  case VALUE_QUEEN: strcpy(x, "Q"); break;
-  case VALUE_KING: strcpy(x, "K"); break;
-  case VALUE_ACE: strcpy(x, "A"); break;
-  default: printf("Invalid value for cards"); break;
+  case 2: return '2'; break;
+  case 3: return '3'; break;
+  case 4: return '4'; break;
+  case 5: return '5'; break;
+  case 6: return '6'; break;
+  case 7: return '7'; break;
+  case 8: return '8'; break;
+  case 9: return '9'; break;
+  case 10: return '0'; break;
+  case VALUE_JACK: return 'J'; break;
+  case VALUE_QUEEN: return 'Q'; break;
+  case VALUE_KING: return 'K'; break;
+  case VALUE_ACE: return 'A'; break;
+  default: return '?'; break;
  }
  return 'x';
 }
