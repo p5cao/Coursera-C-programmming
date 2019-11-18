@@ -51,10 +51,10 @@ char value_letter(card_t c) {
 char suit_letter(card_t c) {
   char *x = "";
   switch(c.suit){
-  case SPADES: strcpy(x, "s"); break;
-  case HEARTS: strcpy(x, "h");; break;
-  case DIAMONDS: strcpy(x, "d"); break;
-  case CLUBS: strcpy(x, "c");; break;
+  case 0: strcpy(x, "s"); break;
+  case 1: strcpy(x, "h");; break;
+  case 2: strcpy(x, "d"); break;
+  case 3: strcpy(x, "c");; break;
   default: printf("Invalid suit for cards\n");break;
   }
   return 'x'; 
