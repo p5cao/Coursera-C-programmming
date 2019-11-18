@@ -6,7 +6,7 @@
 
 void assert_card_valid(card_t c) {
   assert((c.value >= 2 && c.value <= VALUE_ACE));
-  assert((c.suit >= 0  && c.suit <= 3 ));
+  assert((c.suit == SPADES || c.suit == HEARTS || c.suit == DIAMONDS || c.suit == CLUBS ));
 }
 
 const char * ranking_to_string(hand_ranking_t r) {
@@ -38,26 +38,24 @@ char value_letter(card_t c) {
   case 8: strcpy(x, "8"); break;
   case 9: strcpy(x, "9"); break;
   case 10: strcpy(x, "0"); break;
-  case 11: strcpy(x, "J"); break;
-  case 12: strcpy(x, "Q"); break;
-  case 13: strcpy(x, "K"); break;
-  case 14: strcpy(x, "A"); break;
+  case VALUE_JACK: strcpy(x, "J"); break;
+  case VALUE_QUEEN: strcpy(x, "Q"); break;
+  case VALUE_KING: strcpy(x, "K"); break;
+  case VALUE_ACE: strcpy(x, "A"); break;
   default: printf("Invalid value for cards"); break;
-  }
-  return 'x';
+ }
+ return 'x';
 }
 
 
 char suit_letter(card_t c) {
-  char *x = "";
   switch(c.suit){
-  case 0: strcpy(x, "s"); break;
-  case 1: strcpy(x, "h");; break;
-  case 2: strcpy(x, "d"); break;
-  case 3: strcpy(x, "c");; break;
-  default: printf("Invalid suit for cards\n");break;
+  case SPADES: return 's'; break;
+  case HEARTS: return 'h'; break;
+  case DIAMONDS: return 'd'; break;
+  case CLUBS: return 'c'; break;
+  default: return '?';break;
   }
-  return 'x'; 
 }
 
 void print_card(card_t c) {
