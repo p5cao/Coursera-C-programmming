@@ -100,8 +100,8 @@ card_t card_from_letters(char value_let, char suit_let) {
 card_t card_from_num(unsigned c) {
   card_t temp;
   assert( c>=0 && c<52);
-  int suit_num = c % 13;
-  int value_num = c - suit_num * 13;
+  int suit_num = c / 13;
+  int value_num = c % 13 +2;
   suit_t suit;
   switch(value_num){
   case 0: suit = SPADES; break;
