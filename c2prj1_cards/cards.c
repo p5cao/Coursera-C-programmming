@@ -58,13 +58,11 @@ char suit_letter(card_t c) {
 }
 
 void print_card(card_t c) {
-  char * value = "";
-  char * suit = "";
-  char v = value_letter(c);
-  char s = suit_letter(c);
-  strcpy(value, &v);
-  strcpy(suit, &s);
-  printf("%s%s", value,suit);
+  char suit_c = suit_letter(c);
+  printf("%s", &suit_c);
+  
+  char value_c = value_letter(c);
+  printf("%s", &value_c);
 }
 
 card_t card_from_letters(char value_let, char suit_let) {
