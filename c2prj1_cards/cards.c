@@ -37,7 +37,7 @@ char value_letter(card_t c) {
   case 7: strcpy(x, "7"); break;
   case 8: strcpy(x, "8"); break;
   case 9: strcpy(x, "9"); break;
-  case 10: strcpy(x, "10"); break;
+  case 10: strcpy(x, "0"); break;
   case 11: strcpy(x, "J"); break;
   case 12: strcpy(x, "Q"); break;
   case 13: strcpy(x, "K"); break;
