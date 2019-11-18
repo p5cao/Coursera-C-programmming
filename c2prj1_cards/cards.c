@@ -103,7 +103,7 @@ card_t card_from_num(unsigned c) {
   int suit_num = c / 13;
   int value_num = c % 13 +2;
   suit_t suit;
-  switch(value_num){
+  switch(suit_num){
   case 0: suit = SPADES; break;
   case 1: suit = HEARTS; break;
   case 2: suit = DIAMONDS; break;
