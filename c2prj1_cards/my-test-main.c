@@ -41,7 +41,7 @@ int main(void) {
   char suit_c = suit_letter(c1);
   printf("%s", &suit_c);
 
-  char value_c = value_letter(c1);
+  char value_c = value_letter(c1); 
   printf("%s", &value_c);
   printf("\n");
   print_card(c);
@@ -64,5 +64,7 @@ int main(void) {
   printf("\n");
    print_card(c9);
   printf("\n");
+  const char* ranking  = ranking_to_string(STRAIGHT_FLUSH);
+  printf("%s\n", ranking);
   return 0;
 }
